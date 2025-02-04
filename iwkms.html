@@ -13,11 +13,25 @@
     <button id="btn">Rēķināt</button>
     <div id="output"></div>
     <script>
-        const num1Input = document.getElementById("num1")
-        const operatorInput = document.getElementById("operator")
-        const num2Input = document.getElementById("num2")
-        const buttonInput = document.getElementById("btn")
-        const outputContainer = document.getElementById("operator")
+        const num1Input = document.getElementById("num1");
+        const operatorInput = document.getElementById("operator");
+        const num2Input = document.getElementById("num2");
+        const buttonInput = document.getElementById("btn");
+        const outputContainer = document.getElementById("operator");
+
+        buttonInput.addEventListener("click", handleClick);
+
+        function handleClick(){
+            let num1Value = parseFloat(num1Input.value);
+        let num2Value = parseFloat(num2Input.value);
+        let operatorValue = operatorInput.value;
+
+        let errorsArray = validateUserInput(
+          num1Value,
+          num2Value,
+          operatorValue
+        );
+        }
     </script>
 </body>
 </html>
